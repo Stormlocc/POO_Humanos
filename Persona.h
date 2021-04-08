@@ -14,6 +14,8 @@ public:
     Persona(string, string);
     void Leer();
     void Mostrar();
+    string GetDni();
+    string GetNombre();
 };
 
 Persona::Persona()
@@ -41,8 +43,19 @@ void Persona::Leer()
 
 void Persona::Mostrar()
 {
-    cout << "----INFORMACION DE PERONSA----" << endl;
+    cout << "----INFORMACION DE PERSONA----" << endl;
     cout << "============------============" << endl;
     cout << "Nombre: " << nombre << endl;
     cout << "DNI: " << dni << endl;
 }
+
+string Persona::GetDni()
+{
+    return dni;
+}
+
+string Persona::GetNombre()
+{
+    return nombre;
+}
+
