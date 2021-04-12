@@ -11,15 +11,15 @@ private:
 public:
     Docente();
     Docente(string, string, string);
-    void Leer();
-    void Mostrar();
+    void Leer() override;
+    void Mostrar() override;
     ~Docente();
 };
 
 Docente::Docente()
     : Persona()
 {
-    asignatura = " no defindiop";
+    asignatura = " no definido";
 }
 
 Docente::Docente(string _nombre, string _dni, string _asignatura)
@@ -30,7 +30,10 @@ Docente::Docente(string _nombre, string _dni, string _asignatura)
 
 void Docente::Leer()
 {
-    Persona::Leer();
+    cout << "========================================" << endl;
+    cout << "======---LEER INFORM DE DOCENTE---======" << endl;
+    cout << "========================================" << endl;
+    Persona::LeerDatos();
     cout << "Asignatura: ";
     cin >> asignatura;
 }

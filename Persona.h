@@ -5,15 +5,16 @@ using namespace std;
 
 class Persona
 {
-private:
+protected:
     string nombre;
     string dni;
 
 public:
     Persona();
     Persona(string, string);
-    void Leer();
-    void Mostrar();
+    void LeerDatos();
+    virtual void Leer();
+    virtual void Mostrar();
     string GetDni();
     string GetNombre();
 };
@@ -41,6 +42,14 @@ void Persona::Leer()
     cin >> dni;
 }
 
+void Persona::LeerDatos()
+{
+    cout << "Nombre: ";
+    cin >> nombre;
+    cout << "DNI: ";
+    cin >> dni;
+}
+
 void Persona::Mostrar()
 {
     cout << "----INFORMACION DE PERSONA----" << endl;
@@ -58,4 +67,3 @@ string Persona::GetNombre()
 {
     return nombre;
 }
-

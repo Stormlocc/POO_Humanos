@@ -11,8 +11,8 @@ private:
 public:
     Alumno();
     Alumno(string, string, string);
-    void Leer();
-    void Mostrar();
+    void Leer() override;
+    void Mostrar() override;
 };
 
 Alumno::Alumno()
@@ -29,7 +29,10 @@ Alumno::Alumno(string _nombre, string _dni, string _escuela)
 
 void Alumno::Leer()
 {
-    Persona::Leer();
+    cout << "========================================" << endl;
+    cout << "======---LEER INFORM DE PERSONA---======" << endl;
+    cout << "========================================" << endl;
+    Persona::LeerDatos();
     cout << "Escuela: ";
     cin >> escuela;
 }
