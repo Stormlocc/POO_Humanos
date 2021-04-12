@@ -30,7 +30,7 @@ Alumno::Alumno(string _nombre, string _dni, string _escuela)
 void Alumno::Leer()
 {
     cout << "========================================" << endl;
-    cout << "======---LEER INFORM DE PERSONA---======" << endl;
+    cout << "======---LEER INFORM DE ALUMNO----======" << endl;
     cout << "========================================" << endl;
     Persona::LeerDatos();
     cout << "Escuela: ";
